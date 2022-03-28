@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+}
+
+.UsersMangementDiv {
+  border: 3px solid black;
+}
+.UsersComp {
+  border: 3px solid black;
+  margin: 10%;
+}
+.PicMovie {
+  width: 150px;
+  height: 200px;
+  margin-right: 38em;
+}
+.MoviesSubComp {
+  border: 3px solid black;
+  margin: 4%;
+}
+.AddSubComp {
+  border: 3px solid red;
+  margin: 4%;
+}
