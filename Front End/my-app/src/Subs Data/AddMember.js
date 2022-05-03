@@ -22,8 +22,9 @@ export default function AddMember({cancel}) {
         Name : <input type={"text"} name="name" onChange={onChangeObj} /> <br />
         Email : <input type={"text"} name="email" onChange={onChangeObj} /> <br />
         City : <input type={"text"} name="city"  onChange={onChangeObj}/> <br />
-        <button onClick={AddMemberToAPI}>Save</button>
-        <button onClick={cancel}>Cancel</button>
+        <button onClick={AddMemberToAPI}className="btn btn-warning">Save</button>
+        {' '}
+        <button onClick={cancel} className="btn btn-danger">Cancel</button>
     </div>
   )
 }

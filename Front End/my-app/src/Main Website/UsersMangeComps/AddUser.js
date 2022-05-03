@@ -55,7 +55,7 @@ export default function AddUser({cancel}) {
     await axios.put(`http://localhost:8000/permissions/${data[data.length-1]._id}`,Permissions)
   }
     return (
-    <div>
+    <div className='UsersComp'>
         <form onSubmit={SaveData}>
 
         
@@ -71,10 +71,12 @@ export default function AddUser({cancel}) {
         <input type={"checkbox"} name="CreateMovies" onChange={onChangePerms}/> Create Movies <br />
         <input type={"checkbox"} name="DeleteMovies" onChange={onChangePerms}/> Delete Movies <br />
         <input type={"checkbox"} name="UpdateMovies" onChange={onChangePerms}/> Update Movies <br />
-        <button type='submit'>Save</button>
-        
+       
+        <button type='submit' className='btn btn-warning'>Save</button>
+        {' '}
+        <button onClick={cancel} className="btn btn-danger">Cancel</button>
         </form>
-        <button onClick={cancel}>Cancel</button>
+        
     </div>
   )
 }

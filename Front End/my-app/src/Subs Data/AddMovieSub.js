@@ -38,11 +38,12 @@ export default function AddMovieSub({member,moviesWathced,subscribeButton}) {
         <strong>Add a new movie </strong>
         <br />
         <select onChange={selectMovie}>
-        {movies.filter((mov) => !moviesWathced.movies.map((m) => m.movie).includes(mov.name)).map((movies,index) => <option key={index} value={movies._id}>{movies.name}</option>)}
+        {movies.filter((mov) => !moviesWathced.movies.map((m) => m.movie).includes(mov.name)).map((movies,index) => <option key={index} >{movies.name}</option>)}
         </select>
+        {' '}
         <input type={"date"} onChange={dataOfSub}/>
         <br />
-        <button onClick={Subscribe}>Subscribe</button>
+        <button onClick={Subscribe} className="btn btn-info">Subscribe</button>
 
     </div>
   )

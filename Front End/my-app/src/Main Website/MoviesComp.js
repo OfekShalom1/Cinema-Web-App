@@ -65,12 +65,14 @@ export default function MoviesComp() {
   }
   return (
     <div className='UsersMangementDiv'>
-     {permis.permissions.includes("View Movies") &&<div> <button onClick={showAllMovies}>All Movies</button>
+     {permis.permissions.includes("View Movies") &&<div> <button onClick={showAllMovies} className="btn btn-info">All Movies</button>
+     {' '}
      {permis.permissions.includes("Create Movies") &&
-        <button onClick={showAddMoviebutt} >Add Movie</button>}
-     
+        <button onClick={showAddMoviebutt} className="btn btn-info" >Add Movie</button>}
+     {' '}
      <span>Find Movie:</span> <input type={"text"} onChange={e=> setQuery(e.target.value)} />
-     <button onClick={FindButt}>Find</button>
+     {' '}
+     <button onClick={FindButt} className="btn btn-info">Find</button>
      
      </div>
      

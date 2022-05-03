@@ -77,19 +77,19 @@ export default function Subinfo({member,showmovies,cancel}) {
        <span>City:</span> {member.address.city}
 
         <br />
-    { perms.permissions.includes("Update Subscription") &&  <button onClick={goToEditSub}>Edit</button>}
+    { perms.permissions.includes("Update Subscription") &&  <button onClick={goToEditSub} className="btn btn-warning">Edit</button>}
       
-      
-      {perms.permissions.includes("Delete Subscriptions") && <button onClick={DeleteMember}>Delete</button>} 
+      {' '}
+      {perms.permissions.includes("Delete Subscriptions") && <button onClick={DeleteMember} className="btn btn-danger">Delete</button>} 
       
       <div className='MoviesSubComp'> 
          <h4>Movies Watched</h4> 
-         <button onClick={subscribeButt}>Subscribe to new movie</button>
+         <button onClick={subscribeButt} className="btn btn-info">Subscribe to new movie</button>
          {subToMovie && <AddMovieSub member={member} subscribeButton={subsccribeForAddMovie} moviesWathced={subsMovies}/>}
 
       </div>
       <ul>
-      {subsMovies.movies.map((mov) => mov).filter((e) => movies1.map((w) =>  w.name).includes(e.movie)?e:"" ).map((s,index) => <li key={index}> <button onClick={() => onClickMovie(s.movie)} >{s.movie}</button>, {s.date}</li>) } 
+      {subsMovies.movies.map((mov) => mov).filter((e) => movies1.map((w) =>  w.name).includes(e.movie)?e:"" ).map((s,index) => <li key={index}> <button onClick={() => onClickMovie(s.movie)} className="btn btn-light" >{s.movie}</button>, {s.date}</li>) } 
       </ul>
       </div>
      //<li key={index}> <button onClick={() => onClickMovie(s.movie)} >{s.movie}</button>, {s.date}</li>
@@ -104,8 +104,9 @@ export default function Subinfo({member,showmovies,cancel}) {
         Email : <input type={"text"} name="email" defaultValue={member.email} onChange={onChangeToState} /> <br />
         City : <input type={"text"} name="city" defaultValue={member.address.city}  onChange={onChangeToState}/> <br />
        <br />
-       <button onClick={UpdateMembers}>Update</button>
-       <button onClick={CancelEdit}>Cancel</button>
+       <button onClick={UpdateMembers} className="btn btn-warning">Update</button>
+       {' '}
+       <button onClick={CancelEdit} className="btn btn-danger">Cancel</button>
        
         </div>}
     

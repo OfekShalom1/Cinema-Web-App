@@ -92,7 +92,7 @@ export default function Movies({ data ,cancel}) {
                         .map((R, index) => (
                           <li key={index}>
                             
-                           <button onClick={GoToSubsPage}>{R.name}</button>  , {s.date}
+                           <button onClick={GoToSubsPage} className="btn btn-light">{R.name}</button>  , {s.date}
                           </li>
                         ))
                     : null
@@ -102,10 +102,11 @@ export default function Movies({ data ,cancel}) {
             
           
           {permis.permissions.includes("Update Subscription") && (
-            <button onClick={clickEdit}>Edit</button>
+            <button onClick={clickEdit} className="btn btn-warning">Edit</button>
           )}
+          {' '}
           {permis.permissions.includes("Delete Movies") && (
-            <button onClick={DeleteMovie}>Delete</button>
+            <button onClick={DeleteMovie} className="btn btn-danger">Delete</button>
           )}
         </div>
       )}
@@ -144,8 +145,9 @@ export default function Movies({ data ,cancel}) {
             onChange={onChangeObj}
           />{" "}
           <br />
-          <button onClick={UpdateMovieData}>Update</button>
-          <button onClick={CancelClick}>Cancel</button>
+          <button onClick={UpdateMovieData} className="btn btn-warning">Update</button>
+          {' '}
+          <button onClick={CancelClick} className="btn btn-danger">Cancel</button>
         </div>
       )}
     </div>

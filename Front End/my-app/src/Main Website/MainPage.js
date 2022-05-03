@@ -51,14 +51,18 @@ useEffect(async() => {
     navigate("/")
   }
     return (
-    <div>
+    <div className='MainStyle'>
       <h1>Movies - Subsscriptions Web Site</h1> 
+      <h1>Ofek Shalom - Project</h1>
       <br />
       
-     { perms.permissions.includes("View Movies") && <button onClick={ShowMoviesComp}>Movies</button>}
-      {perms.permissions.includes("View Subscriptions")  && <button onClick={ShowSubsComp}>Subsscriptions</button>}
-      {sessionStorage.getItem("username") === users.map((i) => i._id)[0]     &&  <button onClick={ShowUsersComp}>Users Management</button>}
-      <button onClick={logOutFunc}>Logout</button>
+     { perms.permissions.includes("View Movies") && <button onClick={ShowMoviesComp} className="btn btn-primary">Movies</button>}
+     {' '}
+      {perms.permissions.includes("View Subscriptions")  && <button onClick={ShowSubsComp} className="btn btn-danger">Subsscriptions</button>}
+      {' '}
+      {sessionStorage.getItem("username") === users.map((i) => i._id)[0]     &&  <button onClick={ShowUsersComp} className="btn btn-info">Users Management</button>}
+      {' '}
+      <button onClick={logOutFunc} className="btn btn-light">Logout</button>
       
       
       <AppContext.Provider value={{movieName,setMovieName,ShowSubsComp}}>

@@ -111,8 +111,9 @@ export default function UsersDataComp({
           <br />
           <br />
           <br />
-          <button onClick={clickEdit}>Edit</button>
-          <button onClick={deleteUser}>Delete</button>
+          <button onClick={clickEdit} className="btn btn-warning">Edit</button>
+          {' '}
+          <button onClick={deleteUser} className="btn btn-danger">Delete</button>
         </div>
       )}
 
@@ -133,7 +134,7 @@ export default function UsersDataComp({
           <input type={"checkbox"} defaultChecked={dataC.permissions.includes("Delete Movies")?true:false} name="DeleteMovies" onChange={onChangePerms}/> Delete Movies<br />
           <input type={"checkbox"} defaultChecked={dataC.permissions.includes("Update Movie")?true:false} name="UpdateMovie" onChange={onChangePerms} />  Update Movie<br />
           <button type="submit">Update</button>
-          <button onClick={clickCancel}>Cancel</button>
+          <button onClick={clickCancel} >Cancel</button>
           </form>
           
           </div>}

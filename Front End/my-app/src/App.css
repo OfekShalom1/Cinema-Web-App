@@ -1,12 +1,19 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)) , url(Images/free-website-background-15.jpg);
+  background-position: center;
+  position: relative;
+  
+  color: rgb(250, 248, 248);
 }
 
 .UsersMangementDiv {
-  border: 3px solid black;
+  border: 3px solid white;
 }
 .UsersComp {
-  border: 3px solid black;
+  border: 3px solid white;
   margin: 10%;
 }
 .PicMovie {
@@ -15,10 +22,15 @@
   margin-right: 38em;
 }
 .MoviesSubComp {
-  border: 3px solid black;
+  border: 3px solid whitek;
   margin: 4%;
 }
 .AddSubComp {
   border: 3px solid red;
   margin: 4%;
+}
+.MainStyle{
+color: rgb(250, 248, 248);
+
+
 }

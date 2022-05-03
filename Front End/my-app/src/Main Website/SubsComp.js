@@ -37,8 +37,9 @@ export default function SubsComp({showmovies}) {
   return (
     <div className='UsersMangementDiv'>
       <h3>Subscriptions</h3>
-      <button onClick={onClickMembers}>All Members</button>
-      <button onClick={onClickAddMember}>Add Member</button>
+      <button onClick={onClickMembers} className="btn btn-info">All Members</button>
+      {' '}
+      <button onClick={onClickAddMember} className="btn btn-info">Add Member</button>
       <SubContext.Provider value={{onClickMembers}}> 
       {allMembersButt && members.map((mem,index) => {
         return <Subinfo key={mem._id} member={mem} showmovies={showmovies} cancel={onClickMembers } />

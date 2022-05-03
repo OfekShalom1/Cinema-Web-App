@@ -47,8 +47,9 @@ export default function UsersManagement() {
   return (
     <div className="UsersMangementDiv">
       <h2>Users</h2>
-      <button onClick={clickAll}>All Users</button>
-      <button onClick={clickAdd}>Add User</button>
+      <button onClick={clickAll} className="btn btn-info">All Users</button>
+      {' '}
+      <button onClick={clickAdd} className="btn btn-info">Add User</button>
       
       {allUsersBut &&
         users.map((i, index) => {

@@ -27,8 +27,9 @@ export default function AddMovie({cancel}) {
         Genres: <input type={"text"} name="genres" onChange={onChangeObj} /> <br />
         Image Url: <input type={"text"} name="medium" onChange={onChangeObj}/> <br />
         Premiered (For example:2013-06-24): <input type={"text"} name="premiered" onChange={onChangeObj}/> <br />
-        <button onClick={AddMovie}>Save</button>
-        <button onClick={cancel}>Cancel</button>
+        <button onClick={AddMovie} className="btn btn-warning">Save</button>
+        {' '}
+        <button onClick={cancel} className="btn btn-danger">Cancel</button>
 
     </div>
   )
